@@ -137,6 +137,8 @@ class Authenticator {
             }
 
             await _requestServers.remove(port);
+          }).catchError((error){
+            log(error)
           }));
   }
 
